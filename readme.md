@@ -4,10 +4,14 @@ A Python data analysis project that fetches and analyzes real Formula 1 pit stop
 
 ## 📊 Features
 
+- Select and analyze any race from any season (2018–2025)
 - Fetches real F1 race data using the FastF1 API
 - Analyzes pit stop durations by driver and team
-- Visualizes pit stop performance with charts
-- Identifies fastest and slowest pit stops
+- Detailed summary and statistics for each race
+- Unified, scrollable chart with all visualizations in one figure
+- User prompt to save charts to the `charts/` folder
+- Caching for fast repeated analysis
+- Pre-cache all races in a season for speed
 
 ## 🛠️ Technologies Used
 
@@ -15,21 +19,27 @@ A Python data analysis project that fetches and analyzes real Formula 1 pit stop
 - **FastF1** - F1 data API
 - **Pandas** - Data manipulation
 - **Matplotlib & Seaborn** - Data visualization
-- **Scikit-learn** - Machine Learning
 
 ## 📈 Sample Output
 
 ```
-🏆 FASTEST PIT STOP:
-   VER (Red Bull Racing) - 23.67 seconds
+🏁 PIT STOP ANALYSIS: Monaco Grand Prix 2024
+...existing code...
+🏆 PIT STOP RECORDS:
+   🥇 Fastest: VER (Red Bull Racing) - 23.67s on Lap 18
+   🥈 2nd: HAM (Mercedes) - 24.09s on Lap 22
+   🥉 3rd: NOR (McLaren) - 24.36s on Lap 25
 
-🐢 SLOWEST PIT STOP:
-   STR (Aston Martin) - 28.12 seconds
+🐢 Slowest: STR (Aston Martin) - 28.12s on Lap 41
 
-📊 AVERAGE PIT STOP TIME BY TEAM:
-   Red Bull Racing: 23.67 seconds
-   Mercedes: 24.09 seconds
-   Kick Sauber: 24.36 seconds
+👨‍✈️ DRIVER PIT STOP SUMMARY:
+   Driver   Team                 Avg      Best   Stops Pit Laps
+   VER      Red Bull Racing     23.67s   23.67s     1 [18]
+   HAM      Mercedes            24.09s   24.09s     1 [22]
+   ...
+
+📊 After analysis, a unified chart with all visualizations will be shown. You will be prompted:
+💾 Do you want to save this chart to the charts/ folder? (y/n):
 ```
 
 ## 🚀 Getting Started
@@ -70,6 +80,13 @@ A Python data analysis project that fetches and analyzes real Formula 1 pit stop
    python main.py
    ```
 
+## 🕹️ Usage
+
+1. **Select a season and race**: The program will prompt you to choose any available season and race.
+2. **View analysis and charts**: After analysis, a single scrollable chart with all visualizations will be displayed.
+3. **Save charts**: When prompted, enter `y` to save the chart to the `charts/` folder, or `n` to skip saving.
+4. **Pre-cache races**: Use the menu to pre-cache all races in a season for faster future analysis.
+
 ## 📁 Project Structure
 
 ```
@@ -77,6 +94,7 @@ f1-pitstop-analyzer/
 ├── main.py           # Main analysis script
 ├── requirements.txt  # Python dependencies
 ├── cache/            # Cached F1 data (gitignored)
+├── charts/           # Saved chart images (auto-created)
 ├── venv/             # Virtual environment (gitignored)
 ├── .gitignore        # Git ignore file
 └── README.md         # This file
@@ -84,7 +102,7 @@ f1-pitstop-analyzer/
 
 ## 🔮 Future Improvements
 
-- [ ] Analyze multiple races/seasons
+- [ ] Analyze multiple races/seasons at once
 - [ ] Build ML model to predict pit stop times
 - [ ] Add interactive dashboard
 - [ ] Compare pit strategies
