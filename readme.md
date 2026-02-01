@@ -8,6 +8,32 @@ Advanced Formula 1 pit stop analysis with **ML predictions**, **tyre degradation
 ![FastF1](https://img.shields.io/badge/FastF1-3.7+-red?logo=f1)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+---
+
+## 📸 Screenshots
+
+### Main Application
+<p align="center">
+  <img src="docs/screenshots/gui_main.png" alt="F1 PitLab Main Window" width="700"/>
+</p>
+
+### ML Model Training
+<p align="center">
+  <img src="docs/screenshots/ml_training.png" alt="ML Model Training Dialog" width="500"/>
+</p>
+
+### Tire Strategy Analysis
+<p align="center">
+  <img src="docs/screenshots/tire_strategy.png" alt="Tire Strategy Chart" width="700"/>
+</p>
+
+### Pit Stop Analysis Charts
+<p align="center">
+  <img src="charts/pitstop_analysis_Qatar_Grand_Prix_2025.png" alt="Qatar GP Pit Stop Analysis" width="700"/>
+</p>
+
+---
+
 ## 📊 Features
 
 ### Core Analysis
